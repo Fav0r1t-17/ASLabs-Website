@@ -88,7 +88,8 @@ ul[role="list"] { list-style: none; }
     height: 64px;
     display: flex;
     align-items: center;
-    gap: var(--sp-4);
+    /* No gap here — spacing is managed per-slot below so the
+       right-hand lang switcher never shifts when nav text changes width. */
 }
 
 .logo {
@@ -100,6 +101,7 @@ ul[role="list"] { list-style: none; }
     font-size: 1.2rem;
     letter-spacing: -0.02em;
     flex-shrink: 0;
+    margin-right: var(--sp-4); /* fixed gap from logo to nav column */
 }
 
 .logo-mark {
@@ -118,12 +120,24 @@ ul[role="list"] { list-style: none; }
 
 .logo-text { color: var(--clr-text); }
 
+/* The <nav> element expands to fill all remaining space between the logo
+   and the lang switcher. Nav links sit inside it, aligned to the right.
+   This means the lang switcher position never changes when nav text
+   changes width during a language switch. */
+#main-nav {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
     gap: var(--sp-1);
     list-style: none;
-    margin-left: auto;
+    /* margin-left: auto removed — nav column handles alignment now */
 }
 
 .nav-links a {
@@ -152,7 +166,8 @@ ul[role="list"] { list-style: none; }
     display: flex;
     align-items: center;
     gap: var(--sp-3);
-    margin-left: var(--sp-2);
+    flex-shrink: 0;
+    margin-left: var(--sp-4); /* fixed gap from nav column to lang switcher */
 }
 
 /* -----------------------------------------------
@@ -526,6 +541,13 @@ ul[role="list"] { list-style: none; }
     border-radius: var(--r-2xl);
     overflow: hidden;
     box-shadow: var(--shadow-xl), 0 0 0 1px var(--clr-border);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    will-change: transform;
+}
+
+.screenshot-wrap:hover {
+    transform: scale(1.013) translateY(-5px);
+    box-shadow: 0 32px 64px rgb(0 0 0 / 0.14), 0 0 0 1px var(--clr-border);
 }
 
 .app-screenshot {
@@ -534,30 +556,30 @@ ul[role="list"] { list-style: none; }
     display: block;
 }
 
+/* Placeholder shown only when the image file is missing.
+   Text labels are hidden — only a subtle visual cue remains. */
 .screenshot-ph {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 380px;
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    min-height: 320px;
+    background: var(--clr-tinted);
 }
 
 .ph-inner {
-    text-align: center;
-    padding: var(--sp-8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.ph-icon  { font-size: 2.5rem; display: block; margin-bottom: var(--sp-4); }
-.ph-label { font-weight: 600; color: var(--clr-text); margin-bottom: var(--sp-3); }
-.ph-path  {
-    display: inline-block;
-    font-family: ui-monospace, 'Cascadia Code', 'SF Mono', monospace;
-    font-size: 0.8rem;
-    background: var(--clr-surface);
-    border: 1px solid var(--clr-border);
-    padding: var(--sp-2) var(--sp-3);
-    border-radius: var(--r-sm);
-    color: var(--clr-primary);
+/* Hide developer-facing text from the public placeholder */
+.ph-label, .ph-path { display: none; }
+
+.ph-icon {
+    font-size: 1.75rem;
+    opacity: 0.18;
+    display: block;
+    margin-bottom: 0;
 }
 
 /* -----------------------------------------------
@@ -929,6 +951,9 @@ html[lang="en"] [data-lang="en"] { display: block; }
 @media (max-width: 900px) {
     .menu-btn { display: flex; }
 
+    /* On mobile the nav collapses; main-nav no longer needs flex:1 centering */
+    #main-nav { flex: none; }
+
     .nav-links {
         display: none;
         position: fixed;
@@ -976,6 +1001,15 @@ html[lang="en"] [data-lang="en"] { display: block; }
     .section-head { margin-bottom: var(--sp-8); }
 
     .privacy-section { padding: var(--sp-10) 0 var(--sp-16); }
+}
+
+/* Privacy body text: justified on screens wide enough to avoid ugly word gaps */
+@media (min-width: 640px) {
+    .privacy-content p,
+    .privacy-content ul li {
+        text-align: justify;
+        hyphens: auto;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

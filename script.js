@@ -65,10 +65,10 @@ const TRANSLATIONS = {
         /* Contact form */
         'contact.title':      'Контакти',
         'contact.subtitle':   'Въпрос, обратна връзка или проблем? Пишете ни директно.',
-        'contact.name':       'Вашето Иme',
+        'contact.name':       'Вашето Име',
         'contact.email':      'Email',
         'contact.message':    'Съобщение',
-        'contact.name.ph':    'Пълното ви Иme',
+        'contact.name.ph':    'Пълното Ви Име',
         'contact.email.ph':   'your@email.com',
         'contact.message.ph': 'Опишете запитването си...',
         'contact.send':       'Изпрати',
@@ -180,8 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const langOpts = document.querySelectorAll('.lang-opt');
     const page     = document.body.dataset.page || 'home';
 
-    /* Initial language from <html lang=""> */
-    let lang = html.lang || 'bg';
+    /* Language persistence via localStorage.
+       Priority: 1) user's saved choice  2) html[lang] attr  3) default BG.
+       localStorage is the right choice for a static multi-page site:
+       no query-string pollution, no server needed, persists across tabs. */
+    const LANG_KEY = 'aslabs-lang';
+    let lang = localStorage.getItem(LANG_KEY) || html.lang || 'bg';
 
     /* ── Screenshot reveal: textnormalizer.html ── */
     const tnImg = document.getElementById('tn-screenshot');
@@ -205,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyLang(l) {
         lang = l;
         html.lang = l;
+        localStorage.setItem(LANG_KEY, l); /* persist choice across pages */
 
         /* Page title */
         const titles = {
