@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextNormalizer — AS Labs</title>
+    <meta name="description" content="TextNormalizer — лек десктоп инструмент за почистване и нормализиране на текст. Без облак, без акаунт.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232563eb'/><text x='50' y='70' font-size='54' font-family='system-ui' font-weight='800' fill='white' text-anchor='middle'>AS</text></svg>">
+</head>
+<body data-page="tn">
+
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">AS</span>
+                <span class="logo-text">Labs</span>
+            </a>
+            <nav id="main-nav" aria-label="Главно меню">
+                <ul class="nav-links" id="nav-links" role="list">
+                    <li><a href="index.html"          data-i18n="nav.home">Начало</a></li>
+                    <li><a href="textnormalizer.html" data-i18n="nav.tn" aria-current="page">TextNormalizer</a></li>
+                    <li><a href="wbee.html"           data-i18n="nav.wbee">W-Bee</a></li>
+                    <li><a href="index.html#contact"  data-i18n="nav.contact">Контакти</a></li>
+                    <li><a href="privacy.html"        data-i18n="nav.privacy">Поверителност</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switcher" role="group" aria-label="Език / Language">
+                    <button class="lang-opt" data-target-lang="bg" aria-pressed="true">BG</button>
+                    <button class="lang-opt" data-target-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <button id="menu-toggle" class="menu-btn" aria-label="Отвори меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ══════════════ PRODUCT HERO ══════════════ -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="badge badge-available" data-i18n="tn.badge">Наличен сега</span>
+                <h1>TextNormalizer</h1>
+                <p class="page-hero-sub" data-i18n="tn.subtitle">
+                    Почиства, нормализира и трансформира разхвърлян текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.
+                </p>
+                <div class="page-hero-actions">
+                    <!-- TODO: Replace href with your TextNormalizer Gumroad URL, then add target="_blank" rel="noopener noreferrer" -->
+                    <a href="#"
+                       class="btn btn-white btn-lg"
+                       data-i18n="tn.download">Изтегли от Gumroad</a>
+                    <a href="#features" class="btn btn-ghost" data-i18n="tn.see.features">Виж функциите</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════ SCREENSHOT ══════════════ -->
+        <section class="section">
+            <div class="container">
+
+                <div class="screenshot-wrap">
+                    <img
+                        id="tn-screenshot"
+                        src="screenshots/textnormalizer.png"
+                        alt="TextNormalizer app interface"
+                        class="app-screenshot"
+                        loading="lazy"
+                        hidden
+                    >
+                    <div class="screenshot-ph" id="tn-ph" aria-hidden="true">
+                        <div class="ph-inner">
+                            <span class="ph-icon">📸</span>
+                            <p class="ph-label" data-i18n="ph.label">Снимка на приложението</p>
+                            <code class="ph-path">screenshots/textnormalizer.png</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════ FEATURES ══════════════ -->
+                <div id="features" class="section-head" style="margin-top: 0;">
+                    <h2 data-i18n="tn.features.title">Какво прави TextNormalizer</h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">⚡</span>
+                        <h3 data-i18n="tn.f1.title">Моментален преглед</h3>
+                        <p data-i18n="tn.f1.body">Виждате резултата преди да потвърдите. Изберете операции от страничната лента, копирайте или запазете.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">🔒</span>
+                        <h3 data-i18n="tn.f2.title">Напълно офлайн</h3>
+                        <p data-i18n="tn.f2.body">Работи изцяло на вашата машина. Никакви данни не напускат устройството ви.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">🛠️</span>
+                        <h3 data-i18n="tn.f3.title">Мощни операции</h3>
+                        <p data-i18n="tn.f3.body">Премахване на дубликати, извличане на URL и email, промяна на регистър, сортиране, почистване на излишен AI текст.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">💾</span>
+                        <h3 data-i18n="tn.f4.title">Лек и бърз</h3>
+                        <p data-i18n="tn.f4.body">Малък размер, бърз старт. Без допълнителни инсталации или тежки зависимости.</p>
+                    </div>
+                </div>
+
+                <!-- ══════════════ PRICING ══════════════ -->
+                <div class="pricing-card">
+                    <div class="pricing-left">
+                        <div class="pricing-amount">$9.99</div>
+                        <p class="pricing-tag" data-i18n="tn.price.tag">Еднократно плащане</p>
+                        <ul class="pricing-perks" role="list">
+                            <li data-i18n="tn.p1">Пълен достъп до всички операции</li>
+                            <li data-i18n="tn.p2">Безплатни актуализации</li>
+                            <li data-i18n="tn.p3">Работи офлайн, без акаунт</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-right">
+                        <!-- TODO: Replace href with your TextNormalizer Gumroad URL, then add target="_blank" rel="noopener noreferrer" -->
+                        <a href="#"
+                           class="btn btn-primary btn-lg"
+                           data-i18n="tn.download">Изтегли от Gumroad</a>
+                        <p class="pricing-note" data-i18n="tn.note">Достъпен за Windows</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a href="index.html" class="footer-logo">AS Labs</a>
+            <nav class="footer-nav" aria-label="Footer навигация">
+                <a href="privacy.html"    data-i18n="footer.privacy">Политика за поверителност</a>
+                <a href="index.html#contact" data-i18n="footer.contact">Контакти</a>
+            </nav>
+            <p class="footer-copy" data-i18n="footer.copy">© 2026 AS Labs. Всички права запазени.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

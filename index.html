@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232563eb'/><text x='50' y='70' font-size='54' font-family='system-ui' font-weight='800' fill='white' text-anchor='middle'>AS</text></svg>">
 </head>
-<body>
+<body data-page="home">
 
     <header class="site-header">
         <div class="nav-inner">
-            <a href="#home" class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-mark">AS</span>
                 <span class="logo-text">Labs</span>
             </a>
             <nav id="main-nav" aria-label="Главно меню">
                 <ul class="nav-links" id="nav-links" role="list">
-                    <li><a href="#home"           data-i18n="nav.home">Начало</a></li>
-                    <li><a href="#textnormalizer" data-i18n="nav.tn">TextNormalizer</a></li>
-                    <li><a href="#wbee"           data-i18n="nav.wbee">W-Bee</a></li>
-                    <li><a href="#contact"        data-i18n="nav.contact">Контакти</a></li>
-                    <li><a href="privacy.html"    data-i18n="nav.privacy">Поверителност</a></li>
+                    <li><a href="index.html"           data-i18n="nav.home"    aria-current="page">Начало</a></li>
+                    <li><a href="textnormalizer.html"  data-i18n="nav.tn">TextNormalizer</a></li>
+                    <li><a href="wbee.html"            data-i18n="nav.wbee">W-Bee</a></li>
+                    <li><a href="#contact"             data-i18n="nav.contact">Контакти</a></li>
+                    <li><a href="privacy.html"         data-i18n="nav.privacy">Поверителност</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
@@ -34,9 +34,7 @@
                     <button class="lang-opt" data-target-lang="en" aria-pressed="false">EN</button>
                 </div>
                 <button id="menu-toggle" class="menu-btn" aria-label="Отвори меню" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
@@ -44,7 +42,7 @@
 
     <main>
 
-        <!-- ═══════════════ HERO ═══════════════ -->
+        <!-- ══════════════ HERO ══════════════ -->
         <section id="home" class="hero">
             <div class="container">
                 <p class="hero-eyebrow" data-i18n="hero.eyebrow">Локални AI инструменти</p>
@@ -61,112 +59,60 @@
                     <li data-i18n="hero.pill3">Практически резултати</li>
                 </ul>
                 <div class="hero-actions">
-                    <a href="#textnormalizer" class="btn btn-white" data-i18n="hero.cta1">Разгледай продуктите</a>
-                    <a href="#contact"        class="btn btn-ghost" data-i18n="hero.cta2">Свържи се с нас</a>
+                    <a href="#products" class="btn btn-white" data-i18n="hero.cta1">Разгледай продуктите</a>
+                    <a href="#contact"  class="btn btn-ghost" data-i18n="hero.cta2">Свържи се с нас</a>
                 </div>
             </div>
         </section>
 
-        <!-- ═══════════════ TEXTNORMALIZER ═══════════════ -->
-        <section id="textnormalizer" class="section">
+        <!-- ══════════════ PRODUCTS ══════════════ -->
+        <section id="products" class="section">
             <div class="container">
-
                 <div class="section-head">
-                    <span class="badge badge-available" data-i18n="tn.badge">Наличен сега</span>
-                    <h2>TextNormalizer</h2>
-                    <p class="section-sub" data-i18n="tn.subtitle">
-                        Почиства, нормализира и трансформира разхвърлян текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.
+                    <h2 data-i18n="products.title">Нашите инструменти</h2>
+                    <p class="section-sub" data-i18n="products.subtitle">
+                        Всеки инструмент работи изцяло офлайн. Без абонамент, без акаунт.
                     </p>
                 </div>
 
-                <!-- App screenshot — place file at: screenshots/textnormalizer.png -->
-                <div class="screenshot-wrap">
-                    <img
-                        id="tn-screenshot"
-                        src="screenshots/textnormalizer.png"
-                        alt="TextNormalizer app interface"
-                        class="app-screenshot"
-                        loading="lazy"
-                        hidden
-                    >
-                    <div class="screenshot-ph" id="tn-ph" aria-hidden="true">
-                        <div class="ph-inner">
-                            <span class="ph-icon">📸</span>
-                            <p class="ph-label" data-i18n="ph.label">Снимка на приложението</p>
-                            <code class="ph-path">screenshots/textnormalizer.png</code>
+                <div class="products-grid">
+
+                    <!-- TextNormalizer card -->
+                    <article class="product-card">
+                        <div class="product-card-img">
+                            <img src="screenshots/textnormalizer.png"
+                                 alt="TextNormalizer"
+                                 loading="lazy">
                         </div>
-                    </div>
-                </div>
+                        <div class="product-card-body">
+                            <span class="badge badge-available" data-i18n="tn.badge">Наличен сега</span>
+                            <h3>TextNormalizer</h3>
+                            <p data-i18n="tn.tagline">Почиства и нормализира разхвърлян текст от AI чатове, PDF файлове и документи.</p>
+                            <a href="textnormalizer.html" class="btn btn-primary" data-i18n="tn.cta">Виж продукта</a>
+                        </div>
+                    </article>
 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">⚡</span>
-                        <h3 data-i18n="tn.f1.title">Моментален преглед</h3>
-                        <p data-i18n="tn.f1.body">Виждате резултата преди да потвърдите. Изберете операции от страничната лента, копирайте или запазете.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">🔒</span>
-                        <h3 data-i18n="tn.f2.title">Напълно офлайн</h3>
-                        <p data-i18n="tn.f2.body">Работи изцяло на вашата машина. Никакви данни не напускат устройството ви.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">🛠️</span>
-                        <h3 data-i18n="tn.f3.title">Мощни операции</h3>
-                        <p data-i18n="tn.f3.body">Премахване на дубликати, извличане на URL и email, промяна на регистър, сортиране, почистване на излишен AI текст.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">💾</span>
-                        <h3 data-i18n="tn.f4.title">Лек и бърз</h3>
-                        <p data-i18n="tn.f4.body">Малък размер, бърз старт. Без допълнителни инсталации или тежки зависимости.</p>
-                    </div>
-                </div>
+                    <!-- W-Bee card -->
+                    <article class="product-card">
+                        <div class="product-card-img">
+                            <img src="screenshots/W-Bee.png"
+                                 alt="W-Bee"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-card-body">
+                            <span class="badge badge-soon" data-i18n="wb.badge">Очаквайте скоро</span>
+                            <h3>W-Bee</h3>
+                            <p data-i18n="wb.tagline">Локален инструмент за обработка на уеб съдържание. Очаквайте скоро.</p>
+                            <a href="wbee.html" class="btn btn-outline" data-i18n="wb.cta.home">Научи повече</a>
+                        </div>
+                    </article>
 
-                <div class="pricing-card">
-                    <div class="pricing-left">
-                        <div class="pricing-amount">$9.99</div>
-                        <p class="pricing-tag" data-i18n="tn.price.tag">Еднократно плащане</p>
-                        <ul class="pricing-perks" role="list">
-                            <li data-i18n="tn.p1">Пълен достъп до всички операции</li>
-                            <li data-i18n="tn.p2">Безплатни актуализации</li>
-                            <li data-i18n="tn.p3">Работи офлайн, без акаунт</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-right">
-                        <!-- TODO: Replace href with your TextNormalizer Gumroad URL, then restore target="_blank" rel="noopener noreferrer" -->
-                        <a href="#textnormalizer"
-                           class="btn btn-primary btn-lg"
-                           data-i18n="tn.download">Изтегли от Gumroad</a>
-                        <p class="pricing-note" data-i18n="tn.note">Достъпен за Windows</p>
-                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- ═══════════════ W-BEE ═══════════════ -->
-        <section id="wbee" class="section section-tinted">
-            <div class="container">
-
-                <div class="section-head">
-                    <span class="badge badge-soon" data-i18n="wb.badge">Очаквайте скоро</span>
-                    <h2>W-Bee</h2>
-                    <p class="section-sub" data-i18n="wb.subtitle">
-                        Локален инструмент за обработка на уеб съдържание.
-                    </p>
-                </div>
-
-                <div class="coming-card">
-                    <p data-i18n="wb.body">
-                        W-Bee е в активна разработка. Следете за новини или ни пишете, за да получите известие при пускането.
-                    </p>
-                    <a href="#contact" class="btn btn-primary" data-i18n="wb.cta">Уведоми ме</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ═══════════════ CONTACT ═══════════════ -->
-        <section id="contact" class="section">
+        <!-- ══════════════ CONTACT ══════════════ -->
+        <section id="contact" class="section section-tinted">
             <div class="container">
 
                 <div class="section-head">
@@ -179,7 +125,7 @@
                 <form id="contact-form" class="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name" data-i18n="contact.name">Вашето Иme</label>
+                            <label for="name" data-i18n="contact.name">Вашето Име</label>
                             <input type="text" id="name" name="name" autocomplete="name" required
                                    data-i18n-placeholder="contact.name.ph">
                         </div>
@@ -207,7 +153,7 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <a href="#home" class="footer-logo">AS Labs</a>
+            <a href="index.html" class="footer-logo">AS Labs</a>
             <nav class="footer-nav" aria-label="Footer навигация">
                 <a href="privacy.html" data-i18n="footer.privacy">Политика за поверителност</a>
                 <a href="#contact"     data-i18n="footer.contact">Контакти</a>

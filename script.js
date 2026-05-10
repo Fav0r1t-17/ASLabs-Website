@@ -2,8 +2,8 @@
 
 /* =============================================
    AS Labs — script.js
-   Works on both index.html and privacy.html.
-   To add a language, copy one block and translate.
+   Shared across all pages.
+   To add a language: copy one block and translate.
    ============================================= */
 
 const TRANSLATIONS = {
@@ -16,7 +16,7 @@ const TRANSLATIONS = {
         'nav.privacy': 'Поверителност',
         'nav.aria':    'Главно меню',
 
-        /* Hero */
+        /* Hero (home page) */
         'hero.eyebrow': 'Локални AI инструменти',
         'hero.title1':  'Прости инструменти.',
         'hero.title2':  'Реални резултати.',
@@ -27,10 +27,20 @@ const TRANSLATIONS = {
         'hero.cta1':    'Разгледай продуктите',
         'hero.cta2':    'Свържи се с нас',
 
-        /* TextNormalizer */
-        'tn.badge':    'Наличен сега',
-        'tn.subtitle': 'Почиства, нормализира и трансформира разхвърлян текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.',
-        'ph.label':    'Снимка на приложението',
+        /* Products section (home page) */
+        'products.title':    'Нашите инструменти',
+        'products.subtitle': 'Всеки инструмент работи изцяло офлайн. Без абонамент, без акаунт.',
+        'tn.tagline':        'Почиства и нормализира разхвърлян текст от AI чатове, PDF файлове и документи.',
+        'tn.cta':            'Виж продукта',
+        'wb.tagline':        'Локален инструмент за обработка на уеб съдържание. Очаквайте скоро.',
+        'wb.cta.home':       'Научи повече',
+
+        /* TextNormalizer product page */
+        'tn.badge':          'Наличен сега',
+        'tn.subtitle':       'Почиства, нормализира и трансформира разхвърлян текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.',
+        'tn.see.features':   'Виж функциите',
+        'tn.features.title': 'Какво прави TextNormalizer',
+        'ph.label':          'Снимка на приложението',
         'tn.f1.title': 'Моментален преглед',
         'tn.f1.body':  'Виждате резултата преди да потвърдите. Изберете операции от страничната лента, копирайте или запазете.',
         'tn.f2.title': 'Напълно офлайн',
@@ -46,30 +56,30 @@ const TRANSLATIONS = {
         'tn.download':  'Изтегли от Gumroad',
         'tn.note':      'Достъпен за Windows',
 
-        /* W-Bee */
+        /* W-Bee product page */
         'wb.badge':    'Очаквайте скоро',
         'wb.subtitle': 'Локален инструмент за обработка на уеб съдържание.',
         'wb.body':     'W-Bee е в активна разработка. Следете за новини или ни пишете, за да получите известие при пускането.',
         'wb.cta':      'Уведоми ме',
 
         /* Contact form */
-        'contact.title':    'Контакти',
-        'contact.subtitle': 'Въпрос, обратна връзка или проблем? Пишете ни директно.',
-        'contact.name':     'Вашето Иme',
-        'contact.email':    'Email',
-        'contact.message':  'Съобщение',
-        'contact.name.ph':  'Пълното Ви Иm e',
-        'contact.email.ph': 'your@email.com',
+        'contact.title':      'Контакти',
+        'contact.subtitle':   'Въпрос, обратна връзка или проблем? Пишете ни директно.',
+        'contact.name':       'Вашето Иme',
+        'contact.email':      'Email',
+        'contact.message':    'Съобщение',
+        'contact.name.ph':    'Пълното ви Иme',
+        'contact.email.ph':   'your@email.com',
         'contact.message.ph': 'Опишете запитването си...',
-        'contact.send':     'Изпрати',
-        'contact.success':  'Съобщението е изпратено. Ще се свържем с вас скоро.',
+        'contact.send':       'Изпрати',
+        'contact.success':    'Съобщението е изпратено. Ще се свържем с вас скоро.',
 
         /* Footer */
         'footer.privacy': 'Политика за поверителност',
         'footer.contact': 'Контакти',
         'footer.copy':    '© 2026 AS Labs. Всички права запазени.',
 
-        /* Menu button */
+        /* Mobile menu */
         'menu.open':  'Отвори меню',
         'menu.close': 'Затвори меню',
 
@@ -86,7 +96,7 @@ const TRANSLATIONS = {
         'nav.privacy': 'Privacy',
         'nav.aria':    'Main navigation',
 
-        /* Hero */
+        /* Hero (home page) */
         'hero.eyebrow': 'Local-first AI tools',
         'hero.title1':  'Simple tools.',
         'hero.title2':  'Real results.',
@@ -97,10 +107,20 @@ const TRANSLATIONS = {
         'hero.cta1':    'Browse products',
         'hero.cta2':    'Get in touch',
 
-        /* TextNormalizer */
-        'tn.badge':    'Available now',
-        'tn.subtitle': 'Cleans, normalizes, and transforms messy text from AI chats, PDFs, documents, and logs. No cloud, no account, no subscription.',
-        'ph.label':    'App screenshot',
+        /* Products section (home page) */
+        'products.title':    'Our Tools',
+        'products.subtitle': 'Every tool runs entirely offline. No subscription, no account.',
+        'tn.tagline':        'Cleans and normalizes messy text from AI chats, PDFs, and documents.',
+        'tn.cta':            'View product',
+        'wb.tagline':        'A local tool for web content processing. Coming soon.',
+        'wb.cta.home':       'Learn more',
+
+        /* TextNormalizer product page */
+        'tn.badge':          'Available now',
+        'tn.subtitle':       'Cleans, normalizes, and transforms messy text from AI chats, PDFs, documents, and logs. No cloud, no account, no subscription.',
+        'tn.see.features':   'See features',
+        'tn.features.title': 'What TextNormalizer does',
+        'ph.label':          'App screenshot',
         'tn.f1.title': 'Instant preview',
         'tn.f1.body':  'See the output before committing. Pick operations from the sidebar, then copy or save.',
         'tn.f2.title': 'Fully offline',
@@ -116,30 +136,30 @@ const TRANSLATIONS = {
         'tn.download':  'Download on Gumroad',
         'tn.note':      'Available for Windows',
 
-        /* W-Bee */
+        /* W-Bee product page */
         'wb.badge':    'Coming soon',
         'wb.subtitle': 'A local tool for web content processing.',
         'wb.body':     'W-Bee is in active development. Follow along or reach out to be notified when it launches.',
         'wb.cta':      'Notify me',
 
         /* Contact form */
-        'contact.title':    'Contact',
-        'contact.subtitle': 'Question, feedback, or issue? Write to us.',
-        'contact.name':     'Your name',
-        'contact.email':    'Email',
-        'contact.message':  'Message',
-        'contact.name.ph':  'Your full name',
-        'contact.email.ph': 'your@email.com',
+        'contact.title':      'Contact',
+        'contact.subtitle':   'Question, feedback, or issue? Write to us.',
+        'contact.name':       'Your name',
+        'contact.email':      'Email',
+        'contact.message':    'Message',
+        'contact.name.ph':    'Your full name',
+        'contact.email.ph':   'your@email.com',
         'contact.message.ph': 'Describe your inquiry...',
-        'contact.send':     'Send',
-        'contact.success':  'Message sent. We\'ll get back to you soon.',
+        'contact.send':       'Send',
+        'contact.success':    'Message sent. We\'ll get back to you soon.',
 
         /* Footer */
         'footer.privacy': 'Privacy Policy',
         'footer.contact': 'Contact',
         'footer.copy':    '© 2026 AS Labs. All rights reserved.',
 
-        /* Menu button */
+        /* Mobile menu */
         'menu.open':  'Open menu',
         'menu.close': 'Close menu',
 
@@ -148,7 +168,7 @@ const TRANSLATIONS = {
     }
 };
 
-/* ─────────────────────────────────────────── */
+/* ─────────────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', () => {
     const html     = document.documentElement;
@@ -157,80 +177,80 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('nav-links');
     const form     = document.getElementById('contact-form');
     const formOk   = document.getElementById('form-success');
-    const tnImg    = document.getElementById('tn-screenshot');
-    const tnPh     = document.getElementById('tn-ph');
     const langOpts = document.querySelectorAll('.lang-opt');
+    const page     = document.body.dataset.page || 'home';
 
-    /* Initial language matches the html[lang] attribute set in the HTML */
+    /* Initial language from <html lang=""> */
     let lang = html.lang || 'bg';
 
-    /* ── Screenshot: reveal image on successful load ── */
+    /* ── Screenshot reveal: textnormalizer.html ── */
+    const tnImg = document.getElementById('tn-screenshot');
+    const tnPh  = document.getElementById('tn-ph');
     if (tnImg && tnPh) {
-        const revealImg = () => { tnImg.hidden = false; tnPh.hidden = true; };
-        tnImg.addEventListener('load', revealImg);
-        if (tnImg.complete && tnImg.naturalWidth > 0) revealImg();
+        const show = () => { tnImg.hidden = false; tnPh.hidden = true; };
+        tnImg.addEventListener('load', show);
+        if (tnImg.complete && tnImg.naturalWidth > 0) show();
     }
 
-    /* ── Core i18n function ── */
+    /* ── Screenshot reveal: wbee.html ── */
+    const wbImg = document.getElementById('wb-screenshot');
+    const wbPh  = document.getElementById('wb-ph');
+    if (wbImg && wbPh) {
+        const show = () => { wbImg.hidden = false; wbPh.hidden = true; };
+        wbImg.addEventListener('load', show);
+        if (wbImg.complete && wbImg.naturalWidth > 0) show();
+    }
+
+    /* ── Core i18n ── */
     function applyLang(l) {
         lang = l;
         html.lang = l;
 
         /* Page title */
-        const isPrivacyPage = document.body.dataset.page === 'privacy';
-        if (isPrivacyPage) {
-            document.title = l === 'bg'
-                ? 'Политика за поверителност — AS Labs'
-                : 'Privacy Policy — AS Labs';
-        } else {
-            document.title = l === 'bg'
-                ? 'AS Labs — Локални AI инструменти'
-                : 'AS Labs — Local-first AI tools';
-        }
+        const titles = {
+            home:    { bg: 'AS Labs — Локални AI инструменти',    en: 'AS Labs — Local-first AI tools' },
+            tn:      { bg: 'TextNormalizer — AS Labs',             en: 'TextNormalizer — AS Labs' },
+            wb:      { bg: 'W-Bee — AS Labs',                     en: 'W-Bee — AS Labs' },
+            privacy: { bg: 'Политика за поверителност — AS Labs', en: 'Privacy Policy — AS Labs' },
+        };
+        document.title = (titles[page] || titles.home)[l];
 
-        /* Lang switcher buttons — set active state */
+        /* Lang switcher active state */
         langOpts.forEach(btn => {
-            const active = btn.dataset.targetLang === l;
-            btn.setAttribute('aria-pressed', String(active));
+            btn.setAttribute('aria-pressed', String(btn.dataset.targetLang === l));
         });
 
         /* Nav aria-label */
-        if (mainNav) {
-            mainNav.setAttribute('aria-label', TRANSLATIONS[l]['nav.aria']);
-        }
+        if (mainNav) mainNav.setAttribute('aria-label', TRANSLATIONS[l]['nav.aria']);
 
         /* Menu button label */
         if (menuBtn) {
-            const isOpen = navLinks && navLinks.classList.contains('open');
-            menuBtn.setAttribute('aria-label',
-                TRANSLATIONS[l][isOpen ? 'menu.close' : 'menu.open']);
+            const open = navLinks && navLinks.classList.contains('open');
+            menuBtn.setAttribute('aria-label', TRANSLATIONS[l][open ? 'menu.close' : 'menu.open']);
         }
 
-        /* All data-i18n text nodes */
+        /* data-i18n text content */
         const t = TRANSLATIONS[l];
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.dataset.i18n;
             if (key in t) el.textContent = t[key];
         });
 
-        /* All data-i18n-placeholder inputs / textareas */
+        /* data-i18n-placeholder */
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
             const key = el.dataset.i18nPlaceholder;
             if (key in t) el.placeholder = t[key];
         });
 
-        /* data-lang blocks (privacy page content) — CSS drives visibility
-           via html[lang="bg"] [data-lang="bg"] { display: block }.
-           We just set html.lang above and the CSS responds automatically.
-           No JS toggling needed here. */
+        /* [data-lang] blocks (privacy page) — CSS does the work via html[lang] */
     }
 
-    /* ── Language switcher clicks ── */
+    /* ── Lang switcher clicks ── */
     langOpts.forEach(btn => {
         btn.addEventListener('click', () => applyLang(btn.dataset.targetLang));
     });
 
-    /* ── Apply current language on load (hydrates placeholders & aria) ── */
+    /* ── Run on page load (hydrates placeholders, aria, active state) ── */
     applyLang(lang);
 
     /* ── Mobile menu ── */
@@ -238,8 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             const open = navLinks.classList.toggle('open');
             menuBtn.setAttribute('aria-expanded', String(open));
-            menuBtn.setAttribute('aria-label',
-                TRANSLATIONS[lang][open ? 'menu.close' : 'menu.open']);
+            menuBtn.setAttribute('aria-label', TRANSLATIONS[lang][open ? 'menu.close' : 'menu.open']);
         });
 
         navLinks.querySelectorAll('a').forEach(a => {
@@ -251,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ── Smooth scroll (same-page anchors only) ── */
+    /* ── Smooth scroll for same-page anchors ── */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             const id = a.getAttribute('href');
