@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AS Labs</title>
-    <meta name="description" content="AS Labs — local-first AI tools for real-world use. TextNormalizer, W-Bee and more.">
+    <title>AS Labs — Локални AI инструменти</title>
+    <meta name="description" content="AS Labs създава леки, офлайн AI инструменти за реална употреба. TextNormalizer, W-Bee и други.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,17 +19,21 @@
                 <span class="logo-mark">AS</span>
                 <span class="logo-text">Labs</span>
             </a>
-            <nav aria-label="Main navigation">
+            <nav id="main-nav" aria-label="Главно меню">
                 <ul class="nav-links" id="nav-links" role="list">
                     <li><a href="#home"           data-i18n="nav.home">Начало</a></li>
                     <li><a href="#textnormalizer" data-i18n="nav.tn">TextNormalizer</a></li>
                     <li><a href="#wbee"           data-i18n="nav.wbee">W-Bee</a></li>
                     <li><a href="#contact"        data-i18n="nav.contact">Контакти</a></li>
+                    <li><a href="privacy.html"    data-i18n="nav.privacy">Поверителност</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
-                <button id="lang-toggle" class="lang-btn" aria-label="Switch to English">EN</button>
-                <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <div class="lang-switcher" role="group" aria-label="Език / Language">
+                    <button class="lang-opt" data-target-lang="bg" aria-pressed="true">BG</button>
+                    <button class="lang-opt" data-target-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <button id="menu-toggle" class="menu-btn" aria-label="Отвори меню" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,8 +61,8 @@
                     <li data-i18n="hero.pill3">Практически резултати</li>
                 </ul>
                 <div class="hero-actions">
-                    <a href="#textnormalizer" class="btn btn-white"  data-i18n="hero.cta1">Разгледай продуктите</a>
-                    <a href="#contact"        class="btn btn-ghost"  data-i18n="hero.cta2">Свържи се с нас</a>
+                    <a href="#textnormalizer" class="btn btn-white" data-i18n="hero.cta1">Разгледай продуктите</a>
+                    <a href="#contact"        class="btn btn-ghost" data-i18n="hero.cta2">Свържи се с нас</a>
                 </div>
             </div>
         </section>
@@ -71,11 +75,11 @@
                     <span class="badge badge-available" data-i18n="tn.badge">Наличен сега</span>
                     <h2>TextNormalizer</h2>
                     <p class="section-sub" data-i18n="tn.subtitle">
-                        Почиства, нормализира и трансформира разстройни текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.
+                        Почиства, нормализира и трансформира разхвърлян текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.
                     </p>
                 </div>
 
-                <!-- App screenshot — add file at screenshots/textnormalizer.png -->
+                <!-- App screenshot — place file at: screenshots/textnormalizer.png -->
                 <div class="screenshot-wrap">
                     <img
                         id="tn-screenshot"
@@ -108,12 +112,12 @@
                     <div class="feature-card">
                         <span class="feature-icon" aria-hidden="true">🛠️</span>
                         <h3 data-i18n="tn.f3.title">Мощни операции</h3>
-                        <p data-i18n="tn.f3.body">Премахване на дубликати, извличане на URL и email, промяна на регистър, сортиране, почистване на AI filler текст.</p>
+                        <p data-i18n="tn.f3.body">Премахване на дубликати, извличане на URL и email, промяна на регистър, сортиране, почистване на излишен AI текст.</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon" aria-hidden="true">💾</span>
                         <h3 data-i18n="tn.f4.title">Лек и бърз</h3>
-                        <p data-i18n="tn.f4.body">Малък размер, бърз старт. Без инсталационни зависимости или тежки runtime-ове.</p>
+                        <p data-i18n="tn.f4.body">Малък размер, бърз старт. Без допълнителни инсталации или тежки зависимости.</p>
                     </div>
                 </div>
 
@@ -128,10 +132,8 @@
                         </ul>
                     </div>
                     <div class="pricing-right">
-                        <!-- TODO: Replace href value with your TextNormalizer Gumroad URL -->
-                        <a href="TEXTNORMALIZER_GUMROAD_URL"
-                           target="_blank"
-                           rel="noopener noreferrer"
+                        <!-- TODO: Replace href with your TextNormalizer Gumroad URL, then restore target="_blank" rel="noopener noreferrer" -->
+                        <a href="#textnormalizer"
                            class="btn btn-primary btn-lg"
                            data-i18n="tn.download">Изтегли от Gumroad</a>
                         <p class="pricing-note" data-i18n="tn.note">Достъпен за Windows</p>
@@ -157,7 +159,7 @@
                     <p data-i18n="wb.body">
                         W-Bee е в активна разработка. Следете за новини или ни пишете, за да получите известие при пускането.
                     </p>
-                    <a href="#contact" class="btn btn-primary" data-i18n="wb.cta">Искам да бъда уведомен</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="wb.cta">Уведоми ме</a>
                 </div>
 
             </div>
@@ -177,17 +179,20 @@
                 <form id="contact-form" class="contact-form" novalidate>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name" data-i18n="contact.name">Вашето име</label>
-                            <input type="text" id="name" name="name" autocomplete="name" required>
+                            <label for="name" data-i18n="contact.name">Вашето Иme</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required
+                                   data-i18n-placeholder="contact.name.ph">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <label for="email" data-i18n="contact.email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required
+                                   data-i18n-placeholder="contact.email.ph">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message" data-i18n="contact.message">Съобщение</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" required
+                                  data-i18n-placeholder="contact.message.ph"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" data-i18n="contact.send">Изпрати</button>
                     <p class="form-success" id="form-success" hidden data-i18n="contact.success">
@@ -203,9 +208,9 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <a href="#home" class="footer-logo">AS Labs</a>
-            <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="#privacy" data-i18n="footer.privacy">Политика за поверителност</a>
-                <a href="#contact" data-i18n="footer.contact">Контакти</a>
+            <nav class="footer-nav" aria-label="Footer навигация">
+                <a href="privacy.html" data-i18n="footer.privacy">Политика за поверителност</a>
+                <a href="#contact"     data-i18n="footer.contact">Контакти</a>
             </nav>
             <p class="footer-copy" data-i18n="footer.copy">© 2026 AS Labs. Всички права запазени.</p>
         </div>

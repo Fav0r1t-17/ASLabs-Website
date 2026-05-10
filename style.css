@@ -128,12 +128,13 @@ ul[role="list"] { list-style: none; }
 
 .nav-links a {
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 500;
     color: var(--clr-muted);
     padding: var(--sp-2) var(--sp-3);
     border-radius: var(--r-md);
     transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -142,29 +143,61 @@ ul[role="list"] { list-style: none; }
     background: var(--clr-tinted);
 }
 
+.nav-links a[aria-current="page"] {
+    color: var(--clr-primary);
+    font-weight: 600;
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
     gap: var(--sp-3);
-    margin-left: var(--sp-4);
+    margin-left: var(--sp-2);
 }
 
-.lang-btn {
-    font-family: var(--font);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--clr-text);
+/* -----------------------------------------------
+   Language Switcher (segmented control)
+----------------------------------------------- */
+.lang-switcher {
+    display: flex;
+    align-items: center;
     background: var(--clr-tinted);
-    border: 1px solid var(--clr-border);
-    padding: 0.3rem 0.7rem;
+    border: 1.5px solid var(--clr-border);
     border-radius: var(--r-md);
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
+    padding: 3px;
+    gap: 2px;
 }
 
-.lang-btn:hover { background: var(--clr-border); }
+.lang-opt {
+    font-family: var(--font);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--clr-muted);
+    background: transparent;
+    border: none;
+    padding: 0.28rem 0.6rem;
+    border-radius: calc(var(--r-md) - 2px);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s, box-shadow 0.15s;
+    line-height: 1;
+    min-width: 2rem;
+    text-align: center;
+}
 
+.lang-opt[aria-pressed="true"] {
+    background: var(--clr-primary);
+    color: white;
+    box-shadow: 0 1px 4px rgb(37 99 235 / 0.4);
+}
+
+.lang-opt[aria-pressed="false"]:hover {
+    color: var(--clr-text);
+}
+
+/* -----------------------------------------------
+   Mobile menu button
+----------------------------------------------- */
 .menu-btn {
     display: none;
     flex-direction: column;
@@ -335,7 +368,7 @@ ul[role="list"] { list-style: none; }
     font-weight: 500;
     padding: var(--sp-2) var(--sp-4);
     background: rgb(255 255 255 / 0.07);
-    border: 1px solid rgb(255 255 255 / 0.12);
+    border: 1px solid rgb(255 255 255 / 0.14);
     border-radius: 999px;
     color: rgb(203 213 225);
 }
@@ -436,7 +469,7 @@ ul[role="list"] { list-style: none; }
 }
 
 .feature-card:hover {
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md), inset 3px 0 0 var(--clr-primary);
     transform: translateY(-2px);
 }
 
@@ -469,6 +502,7 @@ ul[role="list"] { list-style: none; }
     gap: var(--sp-8);
     background: var(--clr-surface);
     border: 1px solid var(--clr-border);
+    border-top: 3px solid var(--clr-primary);
     border-radius: var(--r-2xl);
     padding: var(--sp-8) var(--sp-10);
     box-shadow: var(--shadow-md);
@@ -592,6 +626,11 @@ ul[role="list"] { list-style: none; }
     appearance: none;
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -622,6 +661,7 @@ ul[role="list"] { list-style: none; }
     background: var(--clr-hero);
     color: rgb(148 163 184);
     padding: var(--sp-8) 0;
+    border-top: 1px solid rgb(255 255 255 / 0.06);
 }
 
 .footer-inner {
@@ -654,6 +694,114 @@ ul[role="list"] { list-style: none; }
 .footer-copy {
     font-size: 0.8rem;
     color: rgb(148 163 184);
+}
+
+/* -----------------------------------------------
+   Privacy page
+----------------------------------------------- */
+
+/* CSS-driven bilingual content blocks.
+   When html[lang="bg"], [data-lang="bg"] elements show and "en" hides.
+   When html[lang="en"], [data-lang="en"] elements show and "bg" hides.
+   No JavaScript toggling needed — the html.lang change in script.js
+   triggers this cascade instantly. */
+[data-lang] { display: none; }
+html[lang="bg"] [data-lang="bg"],
+html[lang="en"] [data-lang="en"] { display: block; }
+
+.privacy-section {
+    padding: var(--sp-16) 0 var(--sp-24);
+}
+
+.privacy-back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--clr-primary);
+    text-decoration: none;
+    margin-bottom: var(--sp-10);
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: var(--r-md);
+    transition: background 0.15s, gap 0.15s;
+}
+
+.privacy-back:hover {
+    background: var(--clr-primary-bg);
+    gap: var(--sp-3);
+}
+
+.privacy-content h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--clr-text);
+    margin-bottom: var(--sp-3);
+}
+
+.privacy-meta {
+    font-size: 0.875rem;
+    color: var(--clr-muted);
+    padding-bottom: var(--sp-8);
+    margin-bottom: var(--sp-10);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.privacy-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-top: var(--sp-10);
+    margin-bottom: var(--sp-4);
+    padding-top: var(--sp-4);
+    border-top: 1px solid var(--clr-border);
+}
+
+.privacy-content h2:first-of-type { border-top: none; margin-top: 0; }
+
+.privacy-content h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-top: var(--sp-6);
+    margin-bottom: var(--sp-2);
+}
+
+.privacy-content p {
+    font-size: 0.95rem;
+    color: var(--clr-muted);
+    line-height: 1.8;
+    margin-bottom: var(--sp-4);
+}
+
+.privacy-content ul {
+    padding-left: var(--sp-6);
+    margin-bottom: var(--sp-4);
+}
+
+.privacy-content ul li {
+    font-size: 0.95rem;
+    color: var(--clr-muted);
+    line-height: 1.7;
+    margin-bottom: var(--sp-2);
+    list-style: disc;
+}
+
+.privacy-content a {
+    color: var(--clr-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s;
+}
+
+.privacy-content a:hover {
+    text-decoration-color: var(--clr-primary);
+}
+
+.privacy-max {
+    max-width: 720px;
 }
 
 /* -----------------------------------------------
@@ -715,6 +863,8 @@ ul[role="list"] { list-style: none; }
     .section { padding: var(--sp-12) 0; }
 
     .section-head { margin-bottom: var(--sp-8); }
+
+    .privacy-section { padding: var(--sp-10) 0 var(--sp-16); }
 }
 
 @media (prefers-reduced-motion: reduce) {
