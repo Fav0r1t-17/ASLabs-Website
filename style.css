@@ -949,6 +949,137 @@ html[lang="en"] [data-lang="en"] { display: block; }
 }
 
 /* -----------------------------------------------
+   Product document links (textnormalizer page)
+----------------------------------------------- */
+.docs-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-5);
+}
+
+.doc-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--clr-primary);
+    text-decoration: none;
+    padding: var(--sp-2) var(--sp-4);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--r-lg);
+    background: var(--clr-surface);
+    transition: background 0.15s, border-color 0.15s;
+    white-space: nowrap;
+}
+
+.doc-link:hover {
+    background: var(--clr-primary-bg);
+    border-color: var(--clr-primary);
+}
+
+.docs-support {
+    font-size: 0.875rem;
+    color: var(--clr-muted);
+}
+
+.docs-support a {
+    color: var(--clr-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.docs-support a:hover { text-decoration: underline; }
+
+/* -----------------------------------------------
+   Product document pages (docs/textnormalizer/*.html)
+----------------------------------------------- */
+.doc-page-section {
+    padding: var(--sp-16) 0 var(--sp-24);
+}
+
+.doc-page-container {
+    max-width: 720px;
+}
+
+.doc-back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--clr-primary);
+    text-decoration: none;
+    margin-bottom: var(--sp-10);
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: var(--r-md);
+    transition: background 0.15s;
+}
+
+.doc-back:hover { background: var(--clr-primary-bg); }
+
+.doc-content h1 {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--clr-text);
+    margin-bottom: var(--sp-3);
+}
+
+.doc-meta {
+    font-size: 0.875rem;
+    color: var(--clr-muted);
+    padding-bottom: var(--sp-6);
+    margin-bottom: var(--sp-8);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.doc-content h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-top: var(--sp-8);
+    margin-bottom: var(--sp-3);
+}
+
+.doc-content h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-top: var(--sp-5);
+    margin-bottom: var(--sp-2);
+}
+
+.doc-content p {
+    font-size: 0.95rem;
+    color: var(--clr-muted);
+    line-height: 1.8;
+    margin-bottom: var(--sp-4);
+}
+
+.doc-content ul,
+.doc-content ol {
+    padding-left: var(--sp-6);
+    margin-bottom: var(--sp-4);
+}
+
+.doc-content ul li,
+.doc-content ol li {
+    font-size: 0.95rem;
+    color: var(--clr-muted);
+    line-height: 1.7;
+    margin-bottom: var(--sp-2);
+}
+
+.doc-content ul li { list-style: disc; }
+.doc-content ol li { list-style: decimal; }
+
+.doc-content a {
+    color: var(--clr-primary);
+    text-underline-offset: 2px;
+}
+
+/* -----------------------------------------------
    Accessibility
 ----------------------------------------------- */
 :focus-visible {
@@ -1013,6 +1144,9 @@ html[lang="en"] [data-lang="en"] { display: block; }
     .section-head { margin-bottom: var(--sp-8); }
 
     .privacy-section { padding: var(--sp-10) 0 var(--sp-16); }
+
+    .doc-page-section { padding: var(--sp-10) 0 var(--sp-16); }
+    .docs-links { gap: var(--sp-2); }
 }
 
 /* Privacy body text: justified on screens wide enough to avoid ugly word gaps */

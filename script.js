@@ -85,6 +85,16 @@ const TRANSLATIONS = {
 
         /* Privacy page */
         'privacy.back': '← Обратно към началото',
+
+        /* TextNormalizer — documents section */
+        'tn.docs.title':          'Документи за продукта',
+        'tn.docs.subtitle':       'Документация, лицензионни условия, политика за поддръжка и политика за възстановяване.',
+        'tn.docs.readme':         'Документация',
+        'tn.docs.eula':           'Лицензионно споразумение',
+        'tn.docs.refund':         'Политика за възстановяване',
+        'tn.docs.support.pol':    'Политика за поддръжка',
+        'tn.docs.post.purchase':  'Бележки след покупката',
+        'tn.docs.contact.line':   'Поддръжка:',
     },
 
     en: {
@@ -165,6 +175,16 @@ const TRANSLATIONS = {
 
         /* Privacy page */
         'privacy.back': '← Back to home',
+
+        /* TextNormalizer — documents section */
+        'tn.docs.title':          'Product Documents',
+        'tn.docs.subtitle':       'Documentation, license terms, support policy, and refund information.',
+        'tn.docs.readme':         'Documentation',
+        'tn.docs.eula':           'License Agreement',
+        'tn.docs.refund':         'Refund Policy',
+        'tn.docs.support.pol':    'Support Policy',
+        'tn.docs.post.purchase':  'Post-Purchase Notes',
+        'tn.docs.contact.line':   'Support:',
     }
 };
 
@@ -214,8 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
             tn:      { bg: 'TextNormalizer — AS Labs',             en: 'TextNormalizer — AS Labs' },
             wb:      { bg: 'W-Bee — AS Labs',                     en: 'W-Bee — AS Labs' },
             privacy: { bg: 'Политика за поверителност — AS Labs', en: 'Privacy Policy — AS Labs' },
+            /* Product document pages (docs/textnormalizer/*.html) use static
+               <title> tags; the JS does not override them. */
         };
-        document.title = (titles[page] || titles.home)[l];
+        if (page !== 'tn-doc') {
+            document.title = (titles[page] || titles.home)[l];
+        }
 
         /* Lang switcher active state */
         langOpts.forEach(btn => {
