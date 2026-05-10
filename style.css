@@ -562,12 +562,14 @@ ul[role="list"] { list-style: none; }
 }
 
 /* Fallback shown only when the image file fails to load.
-   Hidden by default — toggled on via JS onerror. */
-.screenshot-ph {
+   Hidden by default via [hidden] attr. We must NOT declare display here
+   at all because any CSS display value overrides the UA [hidden]{display:none}
+   rule. Instead, we set display only when the element is NOT hidden. */
+.screenshot-ph:not([hidden]) {
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1920 / 1032; /* matches real screenshot dimensions */
+    aspect-ratio: 1920 / 1032;
     background: var(--clr-tinted);
 }
 
@@ -642,6 +644,12 @@ ul[role="list"] { list-style: none; }
     border-radius: var(--r-2xl);
     padding: var(--sp-8) var(--sp-10);
     box-shadow: var(--shadow-md);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.pricing-card:hover {
+    box-shadow: var(--shadow-lg), inset 3px 0 0 var(--clr-primary);
+    transform: translateY(-2px);
 }
 
 .pricing-amount {
