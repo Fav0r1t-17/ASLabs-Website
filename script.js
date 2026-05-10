@@ -187,23 +187,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const LANG_KEY = 'aslabs-lang';
     let lang = localStorage.getItem(LANG_KEY) || html.lang || 'bg';
 
-    /* ── Screenshot reveal: textnormalizer.html ── */
-    const tnImg = document.getElementById('tn-screenshot');
-    const tnPh  = document.getElementById('tn-ph');
-    if (tnImg && tnPh) {
-        const show = () => { tnImg.hidden = false; tnPh.hidden = true; };
-        tnImg.addEventListener('load', show);
-        if (tnImg.complete && tnImg.naturalWidth > 0) show();
-    }
-
-    /* ── Screenshot reveal: wbee.html ── */
-    const wbImg = document.getElementById('wb-screenshot');
-    const wbPh  = document.getElementById('wb-ph');
-    if (wbImg && wbPh) {
-        const show = () => { wbImg.hidden = false; wbPh.hidden = true; };
-        wbImg.addEventListener('load', show);
-        if (wbImg.complete && wbImg.naturalWidth > 0) show();
-    }
+    /* ── Screenshot error fallback ──
+       Images are visible by default. The placeholder div is hidden by
+       default (hidden attr in HTML) and only revealed if the image fails
+       to load. This fixes the previous bug where hidden+lazy images were
+       never fetched by the browser, leaving the placeholder permanently
+       visible and the actual screenshot never appearing. */
+    [['tn-screenshot', 'tn-ph'], ['wb-screenshot', 'wb-ph']].forEach(([imgId, phId]) => {
+        const img = document.getElementById(imgId);
+        const ph  = document.getElementById(phId);
+        if (!img || !ph) return;
+        const showFallback = () => { img.hidden = true; ph.hidden = false; };
+        img.addEventListener('error', showFallback);
+        if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) showFallback();
+    });
 
     /* ── Core i18n ── */
     function applyLang(l) {
