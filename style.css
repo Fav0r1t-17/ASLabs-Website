@@ -14,6 +14,9 @@
     --clr-primary-bg:   #eff6ff;
     --clr-hero:         #0f172a;
     --clr-tinted:       #f1f5f9;
+    --clr-nav:          #111827;   /* header: unified dark surface, one step above hero */
+    --clr-cta:          #f97316;   /* purchase CTA — used only on Gumroad buy button */
+    --clr-cta-hov:      #ea6c10;
 
     --font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
@@ -75,9 +78,9 @@ ul[role="list"] { list-style: none; }
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #163843;
-    border-bottom: 1px solid rgb(255 255 255 / 0.08);
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.22);
+    background: var(--clr-nav);
+    border-bottom: 1px solid rgb(255 255 255 / 0.07);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.04), 0 2px 12px rgb(0 0 0 / 0.3);
 }
 
 .nav-inner {
@@ -144,7 +147,7 @@ ul[role="list"] { list-style: none; }
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;
-    color: rgb(160 210 225);
+    color: rgb(209 213 219);
     padding: var(--sp-2) var(--sp-3);
     border-radius: var(--r-md);
     transition: color 0.15s, background 0.15s;
@@ -188,7 +191,7 @@ ul[role="list"] { list-style: none; }
     font-size: 0.7rem;
     font-weight: 800;
     letter-spacing: 0.08em;
-    color: rgb(160 210 225);
+    color: rgb(209 213 219);
     background: transparent;
     border: none;
     padding: 0.28rem 0.6rem;
@@ -300,6 +303,19 @@ ul[role="list"] { list-style: none; }
 }
 .btn-outline:hover { background: var(--clr-primary-bg); }
 
+/* CTA orange — applied only to the Gumroad purchase button.
+   One warm accent; everything else stays in the blue system. */
+.btn-cta {
+    background: var(--clr-cta);
+    color: white;
+    border-color: var(--clr-cta);
+}
+.btn-cta:hover {
+    background: var(--clr-cta-hov);
+    border-color: var(--clr-cta-hov);
+    box-shadow: 0 4px 14px rgb(249 115 22 / 0.35);
+}
+
 .btn-lg { padding: 0.875rem 1.75rem; font-size: 1rem; }
 
 /* -----------------------------------------------
@@ -399,7 +415,11 @@ ul[role="list"] { list-style: none; }
    Sections
 ----------------------------------------------- */
 .section        { padding: var(--sp-20) 0; }
-.section-tinted { background: var(--clr-tinted); }
+.section-tinted {
+    background: var(--clr-tinted);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+}
 
 .section-head {
     text-align: center;
@@ -1130,9 +1150,9 @@ html[lang="en"] [data-lang="en"] { display: block; }
         top: 64px;
         left: 0;
         right: 0;
-        background: #163843;
-        border-top: 1px solid rgb(255 255 255 / 0.08);
-        border-bottom: 1px solid rgb(255 255 255 / 0.08);
+        background: var(--clr-nav);
+        border-top: 1px solid rgb(255 255 255 / 0.07);
+        border-bottom: 1px solid rgb(255 255 255 / 0.07);
         flex-direction: column;
         padding: var(--sp-4) var(--sp-6);
         gap: var(--sp-1);
