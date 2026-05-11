@@ -15,7 +15,7 @@ const TRANSLATIONS = {
         'hero.subtitle': 'AS Labs създава настолни приложения — локални, офлайн, еднократно плащане.',
         'hero.cta1': 'Разгледай продуктите',
         'hero.cta2': 'Виж W-Bee',
-        'hero.wbee.preview': 'От слайдове, PDF-и и записи към чист DOCX документ.',
+        'hero.wbee.preview': 'От разхвърляни PPTX, PDF и видео/аудио файлове към чист структуриран DOCX учебен документ.',
 
         'products.label': 'Продуктова система',
         'products.title': 'Инструменти за по-чиста работа с текст и документи.',
@@ -195,7 +195,7 @@ const TRANSLATIONS = {
         'hero.subtitle': 'AS Labs builds local desktop applications — offline, no account, one-time purchase.',
         'hero.cta1': 'Explore products',
         'hero.cta2': 'View W-Bee',
-        'hero.wbee.preview': 'From slides, PDFs, and recordings to a clean DOCX document.',
+        'hero.wbee.preview': 'From messy PPTX, PDF, and video/audio files to a clean structured DOCX study document.',
 
         'products.label': 'Product system',
         'products.title': 'Tools for cleaner work with text and documents.',
@@ -348,7 +348,7 @@ const TRANSLATIONS = {
         'contact.email.ph': 'your@email.com',
         'contact.message.ph': 'Describe your inquiry...',
         'contact.send': 'Send',
-        'contact.success': 'Message sent. We'll get back to you soon.',
+        'contact.success': 'Message sent. We\'ll get back to you soon.',
 
         'footer.tagline': 'Local tools for clarity, structure, and practical results.',
         'footer.about': 'About',
