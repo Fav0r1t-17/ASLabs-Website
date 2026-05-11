@@ -1722,3 +1722,96 @@ html[lang="en"] [data-lang="en"] { display: block; }
     gap: var(--space-3);
   }
 }
+
+/* ============================================
+   Operations table — textnormalizer.html
+   ============================================ */
+
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.ops-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  background: var(--color-surface);
+}
+
+.ops-table-caption {
+  caption-side: bottom;
+  padding: var(--space-3) var(--space-5);
+  font-size: 0.8125rem;
+  color: var(--color-text-soft);
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+}
+
+.ops-table thead tr {
+  background: var(--color-surface-soft);
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+.ops-table thead th {
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ops-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.12s;
+}
+
+.ops-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.ops-table tbody tr:nth-child(even) {
+  background: var(--color-surface-soft);
+}
+
+.ops-table tbody tr:hover {
+  background: var(--color-primary-soft);
+}
+
+.ops-table tbody th[scope="row"] {
+  padding: var(--space-4) var(--space-5);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ops-table tbody td {
+  padding: var(--space-4) var(--space-5);
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  vertical-align: middle;
+}
+
+.ops-yes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 700;
+}

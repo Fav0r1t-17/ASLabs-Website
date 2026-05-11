@@ -136,6 +136,67 @@
             </div>
         </section>
 
+        <section class="section section--white">
+            <div class="container">
+                <div class="section-head-centered">
+                    <span class="section-label" data-i18n="ops.label">Операции</span>
+                    <h2 class="section-title" data-i18n="ops.title">Пълен списък на поддържаните операции</h2>
+                    <p class="section-body" data-i18n="ops.subtitle">Всяка операция работи локално — текстът не напуска компютъра ви.</p>
+                </div>
+                <div class="table-wrap">
+                    <table class="ops-table">
+                        <caption class="ops-table-caption" data-i18n="ops.caption">Поддържани операции в TextNormalizer — всички работят напълно офлайн</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" data-i18n="ops.th.op">Операция</th>
+                                <th scope="col" data-i18n="ops.th.desc">Какво прави</th>
+                                <th scope="col" data-i18n="ops.th.case">Типичен случай</th>
+                                <th scope="col" data-i18n="ops.th.offline">Офлайн</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" data-i18n="ops.r1.op">Почистване на интервали</th>
+                                <td data-i18n="ops.r1.desc">Премахва излишни интервали, празни редове и разбити нови редове</td>
+                                <td data-i18n="ops.r1.case">AI отговори, copy-paste от уеб</td>
+                                <td><span class="ops-yes" aria-label="Да">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="ops.r2.op">Нормализация на Unicode</th>
+                                <td data-i18n="ops.r2.desc">Заменя специални Unicode символи с ASCII еквиваленти</td>
+                                <td data-i18n="ops.r2.case">Текст от PDF-и и документи</td>
+                                <td><span class="ops-yes" aria-label="Да">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="ops.r3.op">Премахване на дубликати</th>
+                                <td data-i18n="ops.r3.desc">Открива и изтрива повтарящи се редове от текста</td>
+                                <td data-i18n="ops.r3.case">Логове, списъци и сурови бележки</td>
+                                <td><span class="ops-yes" aria-label="Да">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="ops.r4.op">Извличане на URL-и</th>
+                                <td data-i18n="ops.r4.desc">Извлича всички URL адреси от разхвърлян текст</td>
+                                <td data-i18n="ops.r4.case">Уеб съдържание и доклади</td>
+                                <td><span class="ops-yes" aria-label="Да">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="ops.r5.op">Извличане на имейли</th>
+                                <td data-i18n="ops.r5.desc">Намира и извлича имейл адреси от текстов блок</td>
+                                <td data-i18n="ops.r5.case">Листи с контакти и кореспонденция</td>
+                                <td><span class="ops-yes" aria-label="Да">✓</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="ops.r6.op">Промяна на регистър</th>
+                                <td data-i18n="ops.r6.desc">Трансформира текста — главни, малки или Title Case</td>
+                                <td data-i18n="ops.r6.case">Форматиране на заглавия и списъци</td>
+                                <td><span class="ops-yes" aria-label="Да">✓</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
         <section class="trust-band">
             <div class="container trust-grid">
                 <article>
