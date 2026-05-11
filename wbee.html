@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W-Bee — AS Labs</title>
-    <meta name="description" content="W-Bee — локален инструмент за обработка на уеб съдържание. Очаквайте скоро от AS Labs.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232563eb'/><text x='50' y='70' font-size='54' font-family='system-ui' font-weight='800' fill='white' text-anchor='middle'>AS</text></svg>">
+    <meta name="description" content="W-Bee turns PDFs, slide decks, lecture materials, audio, and video into structured, readable study material. Coming soon from AS Labs.">
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23151512'/><path d='M28 67 43 31h7l15 36h-8l-3-8H39l-3 8h-8Zm14-15h10l-5-13-5 13Z' fill='%23F7F6F1'/></svg>">
 </head>
 <body data-page="wb">
-
     <header class="site-header">
         <div class="nav-inner">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="AS Labs">
                 <span class="logo-mark">AS</span>
                 <span class="logo-text">Labs</span>
             </a>
             <nav id="main-nav" aria-label="Главно меню">
                 <ul class="nav-links" id="nav-links" role="list">
-                    <li><a href="index.html"          data-i18n="nav.home">Начало</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Начало</a></li>
                     <li><a href="textnormalizer.html" data-i18n="nav.tn">TextNormalizer</a></li>
-                    <li><a href="wbee.html"           data-i18n="nav.wbee" aria-current="page">W-Bee</a></li>
-                    <li><a href="index.html#contact"  data-i18n="nav.contact">Контакти</a></li>
-                    <li><a href="privacy.html"        data-i18n="nav.privacy">Поверителност</a></li>
+                    <li><a href="wbee.html" data-i18n="nav.wbee" aria-current="page">W-Bee</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav.contact">Контакти</a></li>
+                    <li><a href="privacy.html" data-i18n="nav.privacy">Поверителност</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
+                <a href="index.html#contact" class="nav-cta" data-i18n="wb.cta">Уведоми ме</a>
                 <div class="lang-switcher" role="group" aria-label="Език / Language">
                     <button class="lang-opt" data-target-lang="bg" aria-pressed="true">BG</button>
                     <button class="lang-opt" data-target-lang="en" aria-pressed="false">EN</button>
@@ -41,66 +40,145 @@
     </header>
 
     <main>
-
-        <!-- ══════════════ PRODUCT HERO ══════════════ -->
-        <section class="page-hero page-hero--soon">
-            <div class="container">
-                <span class="badge badge-soon" data-i18n="wb.badge">Очаквайте скоро</span>
-                <h1>W-Bee</h1>
-                <p class="page-hero-sub" data-i18n="wb.subtitle">
-                    Локален инструмент за обработка на уеб съдържание.
-                </p>
-                <div class="page-hero-actions">
-                    <a href="index.html#contact" class="btn btn-white" data-i18n="wb.cta">Уведоми ме</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ══════════════ SCREENSHOT ══════════════ -->
-        <section class="section">
-            <div class="container">
-
-                <div class="screenshot-wrap">
-                    <img
-                        id="wb-screenshot"
-                        src="screenshots/W-Bee.png"
-                        alt="W-Bee app preview"
-                        class="app-screenshot"
-                        width="1920"
-                        height="1032"
-                        loading="lazy"
-                    >
-                    <div class="screenshot-ph" id="wb-ph" aria-hidden="true" hidden>
-                        <div class="ph-inner">
-                            <span class="ph-icon">📸</span>
-                        </div>
+        <section class="page-hero">
+            <div class="container page-hero-grid">
+                <div>
+                    <span class="badge badge-soon page-hero-badge" data-i18n="wb.badge">Очаквайте скоро</span>
+                    <h1 data-i18n="wb.hero.title">Превърнете източниците си в структурирани, четими учебни материали.</h1>
+                    <p class="page-hero-sub" data-i18n="wb.subtitle">W-Bee взема PDF-и, презентации и лекционни материали и ги трансформира в чисти, добре структурирани документи, които можете да четете, учите и споделяте.</p>
+                    <div class="page-hero-actions">
+                        <a href="index.html#contact" class="btn btn-primary btn-lg" data-i18n="wb.cta">Уведоми ме</a>
+                        <a href="#how" class="btn btn-secondary btn-lg" data-i18n="wb.how.cta">Как работи</a>
                     </div>
                 </div>
-
-                <!-- ══════════════ STATUS CARD ══════════════ -->
-                <div class="coming-card">
-                    <p data-i18n="wb.body">
-                        W-Bee е в активна разработка. Следете за новини или ни пишете, за да получите известие при пускането.
-                    </p>
-                    <a href="index.html#contact" class="btn btn-primary" data-i18n="wb.cta">Уведоми ме</a>
-                </div>
-
+                <aside class="hero-facts">
+                    <div><strong data-i18n="wb.fact.status.value">Soon</strong><span data-i18n="wb.fact.status">В активна разработка</span></div>
+                    <div><strong>DOCX</strong><span data-i18n="wb.fact.output">Чист редактируем изход</span></div>
+                    <div><strong data-i18n="wb.fact.mode.value">Local</strong><span data-i18n="wb.fact.mode">Локален или cloud AI</span></div>
+                </aside>
             </div>
         </section>
 
+        <section class="section section--white">
+            <div class="container">
+                <div class="product-frame screenshot-frame">
+                    <div class="product-frame-chrome">
+                        <span class="product-frame-dot"></span><span class="product-frame-dot"></span><span class="product-frame-dot"></span>
+                        <span class="product-frame-label" data-i18n="wb.preview.label">W-Bee development preview</span>
+                    </div>
+                    <img id="wb-screenshot" src="screenshots/W-Bee.png" alt="W-Bee app preview" width="1920" height="1032" loading="lazy">
+                    <div class="screenshot-ph" id="wb-ph" aria-hidden="true" hidden data-i18n="ph.label">Снимка на приложението</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container editorial-grid">
+                <div>
+                    <span class="section-label" data-i18n="wb.what.label">Какво прави W-Bee</span>
+                    <h2 class="section-title" data-i18n="wb.what.title">Мост между суровия материал и документ, който наистина се чете.</h2>
+                </div>
+                <div class="editorial-copy">
+                    <p data-i18n="wb.what.p1">Повечето материали от лекции, изследвания или презентации не са създадени за четене — те са създадени за представяне. Слайдовете са фрагменти. PDF-ите са плътни. Аудио и видео съдържат знание, което често никога не стига до страница.</p>
+                    <p data-i18n="wb.what.p2">W-Bee анализира структурата на източника, открива естествените секции и теми, извлича вградените изображения и генерира полиран документ, който се чете ясно от начало до край.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--white">
+            <div class="container editorial-grid">
+                <div>
+                    <span class="section-label" data-i18n="wb.why.label">Защо е важно</span>
+                    <h2 class="section-title" data-i18n="wb.why.title">Ръчната трансформация на материали е бавна, повтаряща се и лесна за объркване.</h2>
+                </div>
+                <div class="editorial-copy">
+                    <p data-i18n="wb.why.p1">Конвертирането на суров академичен или професионален материал в четим документ отнема време. Да го направите точно — със запазен ред на секциите, правилно поставени изображения и терминология на оригиналния език — е още по-трудно.</p>
+                    <p data-i18n="wb.why.p2">W-Bee поема тази работа без да изисква да докосвате шаблон, да пренареждате секции или ръчно да поставяте фигури. Входът е source material. Изходът е документ, готов за използване.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--soft">
+            <div class="container">
+                <div class="section-head-centered">
+                    <span class="section-label" data-i18n="features.label">Функции</span>
+                    <h2 class="section-title" data-i18n="wb.features.title">Създаден за вярно организиране, не за повърхностно резюме.</h2>
+                </div>
+                <div class="features-grid feature-grid-3">
+                    <article class="feature-card"><h3 class="feature-card-title" data-i18n="wb.f1.title">Структуриран документен изход</h3><p class="feature-card-body" data-i18n="wb.f1.body">Заглавия, основен текст, списъци и секции се генерират от логическата структура на съдържанието, не от форматиращи предположения.</p></article>
+                    <article class="feature-card"><h3 class="feature-card-title" data-i18n="wb.f2.title">Точно поставяне на изображения</h3><p class="feature-card-body" data-i18n="wb.f2.body">Фигурите се извличат и поставят в секцията, към която принадлежат, съобразено с позицията им в източника.</p></article>
+                    <article class="feature-card"><h3 class="feature-card-title" data-i18n="wb.f3.title">Езикова вярност</h3><p class="feature-card-body" data-i18n="wb.f3.body">W-Bee запазва оригиналния език и техническата терминология, включително неанглийска академична и професионална лексика.</p></article>
+                    <article class="feature-card"><h3 class="feature-card-title" data-i18n="wb.f4.title">Cloud или локален AI</h3><p class="feature-card-body" data-i18n="wb.f4.body">Използвайте собствен OpenAI ключ за cloud обработка или работете изцяло офлайн с локален модел.</p></article>
+                    <article class="feature-card"><h3 class="feature-card-title" data-i18n="wb.f5.title">PDF, PPTX, DOCX, TXT, audio, video</h3><p class="feature-card-body" data-i18n="wb.f5.body">Едно приложение покрива пълния набор от лекционни и референтни формати.</p></article>
+                    <article class="feature-card"><h3 class="feature-card-title" data-i18n="wb.f6.title">Чист DOCX изход</h3><p class="feature-card-body" data-i18n="wb.f6.body">Резултатът е стандартен Word документ: редактируем, печатим и съвместим с обичайните инструменти.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--white">
+            <div class="container">
+                <div class="section-head split-head">
+                    <div>
+                        <span class="section-label" data-i18n="wb.who.label">За кого е</span>
+                        <h2 class="section-title" data-i18n="wb.who.title">За хора, които редовно превръщат знание в работни документи.</h2>
+                    </div>
+                </div>
+                <div class="built-for-grid">
+                    <article class="built-for-card"><h3 class="built-for-title" data-i18n="wb.who1.title">Студенти и изследователи</h3><p class="built-for-body" data-i18n="wb.who1.body">За лекционни слайдове, академични текстове и записи, които трябва да станат полезни за учене или писане.</p></article>
+                    <article class="built-for-card"><h3 class="built-for-title" data-i18n="wb.who2.title">Преподаватели и обучители</h3><p class="built-for-body" data-i18n="wb.who2.body">За създаване на чисти учебни материали от различни източници без ръчно сглобяване.</p></article>
+                    <article class="built-for-card"><h3 class="built-for-title" data-i18n="wb.who3.title">Професионалисти и knowledge workers</h3><p class="built-for-body" data-i18n="wb.who3.body">За технически спецификации, доклади и записани брифинги, които трябва да станат структурирани бързо.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how" class="section">
+            <div class="container split-layout">
+                <div class="split-content">
+                    <span class="section-label" data-i18n="wb.how.label">Как работи</span>
+                    <h2 class="section-title" data-i18n="wb.how.title">От source file до готов DOCX в един последователен процес.</h2>
+                    <p class="section-body" data-i18n="wb.how.body">Процесът е проектиран така, че да запази структурата, терминологията и визуалните елементи, вместо да ги изглади в безлично резюме.</p>
+                </div>
+                <ol class="process-list">
+                    <li><span>01</span><p data-i18n="wb.step1">Импортирайте source файл — PDF, презентация, документ или запис.</p></li>
+                    <li><span>02</span><p data-i18n="wb.step2">W-Bee анализира структурата, открива теми и извлича изображения.</p></li>
+                    <li><span>03</span><p data-i18n="wb.step3">AI пренаписва материала в четими секции с точни заглавия и правилно поставени изображения.</p></li>
+                    <li><span>04</span><p data-i18n="wb.step4">Изтегляте полиран DOCX документ, готов за четене, споделяне или редакция.</p></li>
+                </ol>
+                <p class="process-note" data-i18n="wb.process.note">Целият процес работи на вашата машина. Документи не се съхраняват или споделят външно, освен ако изберете cloud AI обработка — и тогава към модела се изпраща само текстовото съдържание, не вашите файлове.</p>
+            </div>
+        </section>
+
+        <section class="section section--soft">
+            <div class="container cta-panel">
+                <span class="badge badge-soon" data-i18n="wb.badge">Очаквайте скоро</span>
+                <h2 class="section-title" data-i18n="wb.final.title">Започнете да създавате по-добри документи.</h2>
+                <p class="section-body" data-i18n="wb.final.body">W-Bee не обобщава и не преразказва произволно — той организира и представя. Резултатът е документ, който вярно отразява изходния материал в реално използваема форма.</p>
+                <div class="status-list status-list-horizontal">
+                    <div class="status-item"><span class="status-dot"></span><span data-i18n="wb.status.active">В активна разработка</span></div>
+                    <div class="status-item"><span class="status-dot"></span><span data-i18n="wb.status.launch">Дата на пускане предстои</span></div>
+                    <div class="status-item"><span class="status-dot"></span><span data-i18n="wb.status.notify">Пишете ни за известие</span></div>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary btn-lg" data-i18n="wb.cta">Уведоми ме</a>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <a href="index.html" class="footer-logo">AS Labs</a>
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="footer-logo">AS Labs</a>
+                <p class="footer-copy" data-i18n="footer.tagline">Локални инструменти за яснота, структура и практически резултати.</p>
+            </div>
             <nav class="footer-nav" aria-label="Footer навигация">
-                <a href="privacy.html"       data-i18n="footer.privacy">Политика за поверителност</a>
+                <a href="textnormalizer.html">TextNormalizer</a>
+                <a href="wbee.html">W-Bee</a>
+                <a href="privacy.html" data-i18n="footer.privacy">Политика за поверителност</a>
                 <a href="index.html#contact" data-i18n="footer.contact">Контакти</a>
             </nav>
-            <p class="footer-copy" data-i18n="footer.copy">© 2026 AS Labs. Всички права запазени.</p>
+            <p class="footer-legal" data-i18n="footer.copy">© 2026 AS Labs. Всички права запазени.</p>
         </div>
     </footer>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 </body>
 </html>

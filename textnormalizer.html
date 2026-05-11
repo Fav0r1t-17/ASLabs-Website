@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TextNormalizer — AS Labs</title>
-    <meta name="description" content="TextNormalizer — лек десктоп инструмент за почистване и нормализиране на текст. Без облак, без акаунт.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%232563eb'/><text x='50' y='70' font-size='54' font-family='system-ui' font-weight='800' fill='white' text-anchor='middle'>AS</text></svg>">
+    <meta name="description" content="TextNormalizer cleans and normalizes messy text from AI chats, PDFs, documents, and logs. Offline desktop utility by AS Labs.">
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23151512'/><path d='M28 67 43 31h7l15 36h-8l-3-8H39l-3 8h-8Zm14-15h10l-5-13-5 13Z' fill='%23F7F6F1'/></svg>">
 </head>
 <body data-page="tn">
-
     <header class="site-header">
         <div class="nav-inner">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="AS Labs">
                 <span class="logo-mark">AS</span>
                 <span class="logo-text">Labs</span>
             </a>
             <nav id="main-nav" aria-label="Главно меню">
                 <ul class="nav-links" id="nav-links" role="list">
-                    <li><a href="index.html"          data-i18n="nav.home">Начало</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Начало</a></li>
                     <li><a href="textnormalizer.html" data-i18n="nav.tn" aria-current="page">TextNormalizer</a></li>
-                    <li><a href="wbee.html"           data-i18n="nav.wbee">W-Bee</a></li>
-                    <li><a href="index.html#contact"  data-i18n="nav.contact">Контакти</a></li>
-                    <li><a href="privacy.html"        data-i18n="nav.privacy">Поверителност</a></li>
+                    <li><a href="wbee.html" data-i18n="nav.wbee">W-Bee</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav.contact">Контакти</a></li>
+                    <li><a href="privacy.html" data-i18n="nav.privacy">Поверителност</a></li>
                 </ul>
             </nav>
             <div class="nav-actions">
+                <a href="https://stoilov8.gumroad.com/l/mxdpux?_gl=1*1e403nx*_ga*MTA1ODM5NTY0Ny4xNzc4Mzk1NzAz*_ga_6LJN6D94N6*czE3Nzg0MDE2MzEkbzIkZzEkdDE3Nzg0MDE4NTQkajQ1JGwwJGgw" target="_blank" rel="noopener noreferrer" class="nav-cta" data-i18n="tn.download.short">Gumroad</a>
                 <div class="lang-switcher" role="group" aria-label="Език / Language">
                     <button class="lang-opt" data-target-lang="bg" aria-pressed="true">BG</button>
                     <button class="lang-opt" data-target-lang="en" aria-pressed="false">EN</button>
@@ -41,135 +40,172 @@
     </header>
 
     <main>
-
-        <!-- ══════════════ PRODUCT HERO ══════════════ -->
         <section class="page-hero">
+            <div class="container page-hero-grid">
+                <div>
+                    <span class="badge badge-available page-hero-badge" data-i18n="tn.badge">Наличен сега</span>
+                    <h1 data-i18n="tn.hero.title">Почистете разхвърляния текст, преди да забави работата ви.</h1>
+                    <p class="page-hero-sub" data-i18n="tn.subtitle">TextNormalizer почиства, нормализира и трансформира текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.</p>
+                    <div class="page-hero-actions">
+                        <a href="https://stoilov8.gumroad.com/l/mxdpux?_gl=1*1e403nx*_ga*MTA1ODM5NTY0Ny4xNzc4Mzk1NzAz*_ga_6LJN6D94N6*czE3Nzg0MDE2MzEkbzIkZzEkdDE3Nzg0MDE4NTQkajQ1JGwwJGgw" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-i18n="tn.download">Изтегли от Gumroad</a>
+                        <a href="#features" class="btn btn-secondary btn-lg" data-i18n="tn.see.features">Виж функциите</a>
+                        <span class="page-hero-price" data-i18n="tn.hero.price">$9.99 еднократно плащане</span>
+                    </div>
+                </div>
+                <aside class="hero-facts" aria-label="TextNormalizer facts">
+                    <div><strong>$9.99</strong><span data-i18n="tn.fact.price">Еднократно</span></div>
+                    <div><strong data-i18n="tn.fact.local.value">Offline</strong><span data-i18n="tn.fact.local">Данните остават при вас</span></div>
+                    <div><strong data-i18n="tn.fact.platform.value">Windows</strong><span data-i18n="tn.note">Достъпен за Windows</span></div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section section--white">
             <div class="container">
-                <span class="badge badge-available" data-i18n="tn.badge">Наличен сега</span>
-                <h1>TextNormalizer</h1>
-                <p class="page-hero-sub" data-i18n="tn.subtitle">
-                    Почиства, нормализира и трансформира разхвърлян текст от AI чатове, PDF файлове, документи и логове. Без облак, без акаунт, без абонамент.
-                </p>
-                <div class="page-hero-actions">
-                    <a href="https://stoilov8.gumroad.com/l/mxdpux?_gl=1*1e403nx*_ga*MTA1ODM5NTY0Ny4xNzc4Mzk1NzAz*_ga_6LJN6D94N6*czE3Nzg0MDE2MzEkbzIkZzEkdDE3Nzg0MDE4NTQkajQ1JGwwJGgw"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn btn-white btn-lg"
-                       data-i18n="tn.download">Изтегли от Gumroad</a>
-                    <a href="#features" class="btn btn-ghost" data-i18n="tn.see.features">Виж функциите</a>
+                <div class="product-frame screenshot-frame">
+                    <div class="product-frame-chrome">
+                        <span class="product-frame-dot"></span><span class="product-frame-dot"></span><span class="product-frame-dot"></span>
+                        <span class="product-frame-label">TextNormalizer</span>
+                    </div>
+                    <img id="tn-screenshot" src="screenshots/textnormalizer.png" alt="TextNormalizer app interface" width="1920" height="1032" loading="lazy">
+                    <div class="screenshot-ph" id="tn-ph" aria-hidden="true" hidden data-i18n="ph.label">Снимка на приложението</div>
+                </div>
+                <p class="screenshot-caption" data-i18n="tn.screenshot.caption">Прегледайте резултата, изберете операции, копирайте или запазете почистения текст от едно локално desktop приложение.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head split-head">
+                    <div>
+                        <span class="section-label" data-i18n="usecases.label">Случаи на употреба</span>
+                        <h2 class="section-title" data-i18n="tn.usecases.title">Създаден за текст, който идва от реални работни източници.</h2>
+                    </div>
+                    <p class="section-body" data-i18n="tn.usecases.body">Копирането от AI чатове, PDF-и и документи често оставя скрит шум. TextNormalizer го премахва преди текстът да влезе във вашия workflow.</p>
+                </div>
+                <div class="use-cases-grid">
+                    <article class="use-case-card">
+                        <h3 class="use-case-title" data-i18n="tn.uc1.title">AI chat cleanup</h3>
+                        <p class="use-case-body" data-i18n="tn.uc1.body">Премахнете излишни формати, празни редове и повтарящ се текст от AI отговори.</p>
+                    </article>
+                    <article class="use-case-card">
+                        <h3 class="use-case-title" data-i18n="tn.uc2.title">PDF и документен текст</h3>
+                        <p class="use-case-body" data-i18n="tn.uc2.body">Подредете копирани блокове с разбити редове, странни интервали и непоследователна пунктуация.</p>
+                    </article>
+                    <article class="use-case-card">
+                        <h3 class="use-case-title" data-i18n="tn.uc3.title">Листи, URL-и и email-и</h3>
+                        <p class="use-case-body" data-i18n="tn.uc3.body">Извлечете структурирани елементи и подгответе чисти списъци за следваща обработка.</p>
+                    </article>
+                    <article class="use-case-card">
+                        <h3 class="use-case-title" data-i18n="tn.uc4.title">Логове и сурови бележки</h3>
+                        <p class="use-case-body" data-i18n="tn.uc4.body">Сортирайте, нормализирайте и намалете шума в текст, който не е писан за четене.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- ══════════════ SCREENSHOT ══════════════ -->
-        <section class="section">
+        <section id="features" class="section section--soft">
             <div class="container">
+                <div class="section-head-centered">
+                    <span class="section-label" data-i18n="features.label">Функции</span>
+                    <h2 class="section-title" data-i18n="tn.features.title">Какво прави TextNormalizer</h2>
+                    <p class="section-body" data-i18n="tn.features.subtitle">Малък инструмент, фокусиран върху операции, които реално спестяват време.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span>
+                        <h3 class="feature-card-title" data-i18n="tn.f1.title">Моментален преглед</h3>
+                        <p class="feature-card-body" data-i18n="tn.f1.body">Виждате резултата преди да потвърдите. Изберете операции от страничната лента, копирайте или запазете.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-card-icon"><svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="10" rx="2"/></svg></span>
+                        <h3 class="feature-card-title" data-i18n="tn.f2.title">Напълно офлайн</h3>
+                        <p class="feature-card-body" data-i18n="tn.f2.body">Работи изцяло на вашата машина. Никакви данни не напускат устройството ви.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-card-icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></svg></span>
+                        <h3 class="feature-card-title" data-i18n="tn.f3.title">Мощни операции</h3>
+                        <p class="feature-card-body" data-i18n="tn.f3.body">Премахване на дубликати, извличане на URL и email, промяна на регистър, сортиране, почистване на излишен AI текст.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-card-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg></span>
+                        <h3 class="feature-card-title" data-i18n="tn.f4.title">Лек и бърз</h3>
+                        <p class="feature-card-body" data-i18n="tn.f4.body">Малък размер, бърз старт. Без допълнителни инсталации или тежки зависимости.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <div class="screenshot-wrap">
-                    <img
-                        id="tn-screenshot"
-                        src="screenshots/textnormalizer.png"
-                        alt="TextNormalizer app interface"
-                        class="app-screenshot"
-                        width="1920"
-                        height="1032"
-                        loading="lazy"
-                    >
-                    <div class="screenshot-ph" id="tn-ph" aria-hidden="true" hidden>
-                        <div class="ph-inner">
-                            <span class="ph-icon">📸</span>
+        <section class="trust-band">
+            <div class="container trust-grid">
+                <article>
+                    <h3 class="trust-item-title" data-i18n="trust.one.title">Без облачна зависимост</h3>
+                    <p class="trust-item-body" data-i18n="trust.one.body">TextNormalizer работи локално и не изпраща вашия текст към външни услуги.</p>
+                </article>
+                <article>
+                    <h3 class="trust-item-title" data-i18n="trust.two.title">Без акаунт</h3>
+                    <p class="trust-item-body" data-i18n="trust.two.body">Купувате продукта и го използвате без регистрация или login flow.</p>
+                </article>
+                <article>
+                    <h3 class="trust-item-title" data-i18n="trust.three.title">Без абонамент</h3>
+                    <p class="trust-item-body" data-i18n="trust.three.body">Еднократна покупка за пълен достъп до операциите.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--white">
+            <div class="container">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <div class="pricing-price">$9.99</div>
+                        <p class="pricing-period" data-i18n="tn.price.tag">Еднократно плащане</p>
+                    </div>
+                    <div class="pricing-card-body">
+                        <ul class="pricing-perks" role="list">
+                            <li><span class="perk-check">✓</span><span data-i18n="tn.p1">Пълен достъп до всички операции</span></li>
+                            <li><span class="perk-check">✓</span><span data-i18n="tn.p2">Безплатни актуализации</span></li>
+                            <li><span class="perk-check">✓</span><span data-i18n="tn.p3">Работи офлайн, без акаунт</span></li>
+                        </ul>
+                        <div class="pricing-cta">
+                            <a href="https://stoilov8.gumroad.com/l/mxdpux?_gl=1*1e403nx*_ga*MTA1ODM5NTY0Ny4xNzc4Mzk1NzAz*_ga_6LJN6D94N6*czE3Nzg0MDE2MzEkbzIkZzEkdDE3Nzg0MDE4NTQkajQ1JGwwJGgw" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-i18n="tn.download">Изтегли от Gumroad</a>
+                            <p class="pricing-note" data-i18n="tn.note">Достъпен за Windows</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- ══════════════ FEATURES ══════════════ -->
-                <div id="features" class="section-head" style="margin-top: 0;">
-                    <h2 data-i18n="tn.features.title">Какво прави TextNormalizer</h2>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">⚡</span>
-                        <h3 data-i18n="tn.f1.title">Моментален преглед</h3>
-                        <p data-i18n="tn.f1.body">Виждате резултата преди да потвърдите. Изберете операции от страничната лента, копирайте или запазете.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">🔒</span>
-                        <h3 data-i18n="tn.f2.title">Напълно офлайн</h3>
-                        <p data-i18n="tn.f2.body">Работи изцяло на вашата машина. Никакви данни не напускат устройството ви.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">🛠️</span>
-                        <h3 data-i18n="tn.f3.title">Мощни операции</h3>
-                        <p data-i18n="tn.f3.body">Премахване на дубликати, извличане на URL и email, промяна на регистър, сортиране, почистване на излишен AI текст.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="feature-icon" aria-hidden="true">💾</span>
-                        <h3 data-i18n="tn.f4.title">Лек и бърз</h3>
-                        <p data-i18n="tn.f4.body">Малък размер, бърз старт. Без допълнителни инсталации или тежки зависимости.</p>
-                    </div>
-                </div>
-
-                <!-- ══════════════ PRICING ══════════════ -->
-                <div class="pricing-card">
-                    <div class="pricing-left">
-                        <div class="pricing-amount">$9.99</div>
-                        <p class="pricing-tag" data-i18n="tn.price.tag">Еднократно плащане</p>
-                        <ul class="pricing-perks" role="list">
-                            <li data-i18n="tn.p1">Пълен достъп до всички операции</li>
-                            <li data-i18n="tn.p2">Безплатни актуализации</li>
-                            <li data-i18n="tn.p3">Работи офлайн, без акаунт</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-right">
-                        <a href="https://stoilov8.gumroad.com/l/mxdpux?_gl=1*1e403nx*_ga*MTA1ODM5NTY0Ny4xNzc4Mzk1NzAz*_ga_6LJN6D94N6*czE3Nzg0MDE2MzEkbzIkZzEkdDE3Nzg0MDE4NTQkajQ1JGwwJGgw"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-cta btn-lg"
-                           data-i18n="tn.download">Изтегли от Gumroad</a>
-                        <p class="pricing-note" data-i18n="tn.note">Достъпен за Windows</p>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- ══════════════ PRODUCT DOCUMENTS ══════════════ -->
-        <section id="documents" class="section section-tinted">
+        <section id="documents" class="docs-section">
             <div class="container">
-                <div class="section-head">
-                    <h2 data-i18n="tn.docs.title">Документи за продукта</h2>
-                    <p class="section-sub" data-i18n="tn.docs.subtitle">
-                        Документация, лицензионни условия, политика за поддръжка и политика за възстановяване.
-                    </p>
-                </div>
-                <div class="docs-links">
+                <span class="section-label" data-i18n="tn.docs.title">Документи за продукта</span>
+                <div class="docs-grid">
                     <a href="docs/textnormalizer/readme.html" class="doc-link" data-i18n="tn.docs.readme">Документация</a>
                     <a href="docs/textnormalizer/eula.html" class="doc-link" data-i18n="tn.docs.eula">Лицензионно споразумение</a>
                     <a href="docs/textnormalizer/refund-policy.html" class="doc-link" data-i18n="tn.docs.refund">Политика за възстановяване</a>
                     <a href="docs/textnormalizer/support-policy.html" class="doc-link" data-i18n="tn.docs.support.pol">Политика за поддръжка</a>
                     <a href="docs/textnormalizer/post-purchase.html" class="doc-link" data-i18n="tn.docs.post.purchase">Бележки след покупката</a>
                 </div>
-                <p class="docs-support">
-                    <span data-i18n="tn.docs.contact.line">Поддръжка:</span>
-                    <a href="mailto:support@aslabs.dev">support@aslabs.dev</a>
-                </p>
+                <p class="docs-support"><span data-i18n="tn.docs.contact.line">Поддръжка:</span> <a href="mailto:support@aslabs.dev">support@aslabs.dev</a></p>
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <a href="index.html" class="footer-logo">AS Labs</a>
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="footer-logo">AS Labs</a>
+                <p class="footer-copy" data-i18n="footer.tagline">Локални инструменти за яснота, структура и практически резултати.</p>
+            </div>
             <nav class="footer-nav" aria-label="Footer навигация">
-                <a href="privacy.html"    data-i18n="footer.privacy">Политика за поверителност</a>
+                <a href="textnormalizer.html">TextNormalizer</a>
+                <a href="wbee.html">W-Bee</a>
+                <a href="privacy.html" data-i18n="footer.privacy">Политика за поверителност</a>
                 <a href="index.html#contact" data-i18n="footer.contact">Контакти</a>
             </nav>
-            <p class="footer-copy" data-i18n="footer.copy">© 2026 AS Labs. Всички права запазени.</p>
+            <p class="footer-legal" data-i18n="footer.copy">© 2026 AS Labs. Всички права запазени.</p>
         </div>
     </footer>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 </body>
 </html>
