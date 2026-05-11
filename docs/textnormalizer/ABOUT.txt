@@ -1,0 +1,9 @@
+TextNormalizer
+
+Created by AS Labs
+
+TextNormalizer is a lightweight Windows desktop utility designed to clean, normalize, and format messy text copied from AI chats, PDFs, documents, and logs.
+
+The application runs completely offline and focuses on fast, simple text processing without unnecessary complexity.
+
+Version 1.0

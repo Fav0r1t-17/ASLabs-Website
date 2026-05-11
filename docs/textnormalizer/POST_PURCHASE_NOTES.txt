@@ -1,0 +1,21 @@
+TextNormalizer — Download and Installation Notes
+
+Thank you for purchasing TextNormalizer.
+
+Installation:
+1. Download the installer from your Gumroad purchase page.
+2. Run the installer on a supported Windows system.
+3. Follow the on-screen setup instructions.
+4. Launch TextNormalizer after installation.
+
+Important notes:
+- Windows only.
+- No account is required for normal use.
+- Internet connection is not required for normal use.
+- Large text files may take longer to process depending on file size and content.
+- Future updates, if released, may be provided through updated files or product updates.
+
+If you need help, contact:
+support@aslabs.dev
+
+When contacting support, include your purchase email, product version, Windows version, and a short description of the issue.

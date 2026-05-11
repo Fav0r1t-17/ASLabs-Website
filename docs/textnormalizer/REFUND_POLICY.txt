@@ -1,0 +1,45 @@
+Refund Policy
+TextNormalizer
+Last updated: 2026
+
+TextNormalizer is a digital software product delivered as a downloadable installer.
+
+Because digital products can be downloaded and retained after purchase, refunds are not automatically guaranteed. However, refund requests may be considered in limited cases.
+
+1. Eligible refund situations
+
+A refund request may be considered if:
+
+- the product cannot be installed or launched under supported conditions on a supported Windows system;
+- the delivered file is corrupted, missing, or materially different from the product description;
+- a technical issue prevents basic use of the product and the issue cannot be resolved after reasonable support contact.
+
+2. Non-refundable situations
+
+Refunds will generally not be provided for:
+
+- change of mind after purchase;
+- unsupported operating systems or unsupported environments;
+- requests based on planned features that are not part of the current released version;
+- issues caused by third-party software, local system configuration, antivirus interference, or user environment where the product itself is not defective;
+- failure to read the product description, supported platform information, or current feature list before purchase.
+
+3. How to request a refund
+
+To request a refund, contact:
+support@aslabs.dev
+
+Please include:
+- your purchase email;
+- your order details;
+- your Windows version;
+- a short description of the problem;
+- and, if possible, a screenshot or error message.
+
+4. Review process
+
+Refund requests are reviewed individually. If a technical issue can be resolved, support may be offered before a refund decision is made.
+
+5. Platform rules
+
+Sales may also be subject to Gumroad platform rules and payment provider requirements. Gumroad may issue refunds in certain situations under its platform policies.

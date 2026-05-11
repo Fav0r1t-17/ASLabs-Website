@@ -1,0 +1,42 @@
+Support Policy
+TextNormalizer
+Last updated: 2026
+
+AS Labs provides limited email support for TextNormalizer.
+
+Support contact:
+support@aslabs.dev
+
+1. What support covers
+
+Support may include:
+- installation issues;
+- launch issues on supported Windows systems;
+- basic troubleshooting;
+- clarification about currently released features.
+
+2. What support does not cover
+
+Support does not include:
+- custom development;
+- feature implementation requests on demand;
+- workflow consulting;
+- support for unsupported operating systems;
+- troubleshooting unrelated third-party tools or system issues beyond reasonable product guidance.
+
+3. Response expectations
+
+AS Labs aims to respond within a reasonable time, but no guaranteed response time or support SLA is provided unless explicitly stated elsewhere.
+
+4. Information to include
+
+When contacting support, please include:
+- your purchase email;
+- product version;
+- Windows version;
+- a short description of the issue;
+- and screenshots or error messages where relevant.
+
+5. Feature requests
+
+Feature suggestions are welcome, but submission of a suggestion does not create any obligation to implement it.

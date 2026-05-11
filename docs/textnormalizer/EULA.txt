@@ -1,0 +1,58 @@
+End User License Agreement (EULA)
+TextNormalizer
+Copyright © 2026 AS Labs
+All rights reserved.
+
+This End User License Agreement ("Agreement") is a legal agreement between you and AS Labs for the use of TextNormalizer, including any installer, application files, updates, and related documentation.
+
+By downloading, installing, accessing, or using TextNormalizer, you agree to be bound by this Agreement.
+
+1. License Grant
+
+AS Labs grants you a limited, personal, non-exclusive, non-transferable, revocable license to install and use TextNormalizer for your own personal or internal business use, subject to this Agreement.
+
+2. License Scope
+
+This license allows you to use the software as delivered by AS Labs. This license does not transfer ownership of the software, source code, branding, or any intellectual property rights.
+
+3. Restrictions
+
+You may not, except where such restrictions are prohibited by applicable law:
+
+- copy, reproduce, or redistribute the software except as reasonably necessary for installation and backup;
+- sell, resell, sublicense, rent, lease, lend, share, or commercially distribute the software;
+- modify, adapt, translate, or create derivative works based on the software;
+- reverse engineer, decompile, disassemble, or otherwise attempt to derive source code;
+- remove or alter copyright, trademark, or proprietary notices;
+- present the software as your own or include it in another product or service without written permission from AS Labs.
+
+4. Updates
+
+AS Labs may provide fixes, changes, or updates at its discretion. Purchase of the software does not guarantee any specific update schedule, support term, or future feature set unless explicitly stated at the time of purchase.
+
+5. Support
+
+AS Labs may provide product support at its discretion. Support availability, response times, and update decisions are not guaranteed unless explicitly stated at the time of purchase.
+
+6. Disclaimer of Warranties
+
+TextNormalizer is provided "as is" and "as available", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, title, and non-infringement.
+
+AS Labs does not warrant that the software will be error-free, uninterrupted, or suitable for every workflow or environment.
+
+7. Limitation of Liability
+
+To the maximum extent permitted by applicable law, AS Labs shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages, or for any loss of data, revenue, profits, business opportunities, or goodwill arising out of or related to the use of or inability to use the software.
+
+8. Termination
+
+This Agreement terminates automatically if you fail to comply with its terms. Upon termination, you must stop using the software and delete all copies in your possession or control.
+
+9. Governing Law
+
+This Agreement shall be governed by applicable law. If any provision of this Agreement is found unenforceable, the remaining provisions shall remain in full force to the maximum extent permitted by law.
+
+10. Contact
+
+AS Labs
+support@aslabs.dev

@@ -1,0 +1,19 @@
+TextNormalizer — Setup Notes
+
+TextNormalizer has been installed on this Windows system together with supporting documentation.
+
+Included with this installation:
+- TextNormalizer application
+- README
+- License and EULA
+- Refund Policy
+- Support Policy
+
+Important notes:
+- Windows only
+- Some antivirus tools may show warnings for newly built standalone applications
+- Large text files may take longer to process depending on file size and content
+
+Support:
+support@aslabs.dev
+https://aslabs.dev/
